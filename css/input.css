@@ -57,3 +57,18 @@
     background-position: 50% 100%;
   }
 }
+
+@layer utilities {
+  .thumbnailImg {
+    @apply size-full object-cover transition duration-300 group-hover:scale-110;
+  }
+  .modal {
+    @apply hidden fixed inset-0 bg-black/50 backdrop-blur-sm;
+  }
+  .modalContent {
+    @apply block m-auto max-w-[80%] max-h-[80%];
+  }
+  .modalClose {
+    @apply absolute top-[15px] right-[35px] text-white text-[40px] font-bold cursor-pointer hover:scale-110 duration-100;
+  }
+}

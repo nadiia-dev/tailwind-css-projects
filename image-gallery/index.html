@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body class="bg-linear-[45deg,indigo,purple,darkblue]">
+    <div class="flex flex-col items-center justify-center min-h-screen">
+      <div class="font-bold text-4xl text-center my-8 text-white">
+        Image gallery
+      </div>
+      <div
+        class="grid grid-cols-1 gap-3 justify-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-5"
+      >
+        <div
+          class="relative border-2 border-white rounded-lg overflow-hidden size-full md:size-56 shadow-md cursor-pointer group"
+        >
+          <img src="./images/121.jpg" alt="image 1" class="thumbnailImg" />
+          <div
+            class="w-full absolute bottom-0 left-0 right-0 p-3 text-white bg-gray-900/80 opacity-0 group-hover:opacity-100"
+          >
+            <h3 class="text-sm font-semibold">Image title 1</h3>
+            <p class="text-xs mt-1 line-clamp-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
+              commodi tempore nisi voluptatem natus cumque rem laboriosam error
+              sed consectetur?
+            </p>
+          </div>
+        </div>
+        <div
+          class="relative border-2 border-white rounded-lg overflow-hidden size-full md:size-56 shadow-md cursor-pointer group"
+        >
+          <img src="./images/131.jpg" alt="image 1" class="thumbnailImg" />
+          <div
+            class="w-full absolute bottom-0 left-0 right-0 p-3 text-white bg-gray-900/80 opacity-0 group-hover:opacity-100"
+          >
+            <h3 class="text-sm font-semibold">Image title 2</h3>
+            <p class="text-xs mt-1 line-clamp-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
+              commodi tempore nisi voluptatem natus cumque rem laboriosam error
+              sed consectetur?
+            </p>
+          </div>
+        </div>
+        <div
+          class="relative border-2 border-white rounded-lg overflow-hidden size-full md:size-56 shadow-md cursor-pointer group"
+        >
+          <img src="./images/141.jpg" alt="image 1" class="thumbnailImg" />
+          <div
+            class="w-full absolute bottom-0 left-0 right-0 p-3 text-white bg-gray-900/80 opacity-0 group-hover:opacity-100"
+          >
+            <h3 class="text-sm font-semibold">Image title 3</h3>
+            <p class="text-xs mt-1 line-clamp-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
+              commodi tempore nisi voluptatem natus cumque rem laboriosam error
+              sed consectetur?
+            </p>
+          </div>
+        </div>
+        <div
+          class="relative border-2 border-white rounded-lg overflow-hidden size-full md:size-56 shadow-md cursor-pointer group"
+        >
+          <img src="./images/151.jpg" alt="image 1" class="thumbnailImg" />
+          <div
+            class="w-full absolute bottom-0 left-0 right-0 p-3 text-white bg-gray-900/80 opacity-0 group-hover:opacity-100"
+          >
+            <h3 class="text-sm font-semibold">Image title 4</h3>
+            <p class="text-xs mt-1 line-clamp-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
+              commodi tempore nisi voluptatem natus cumque rem laboriosam error
+              sed consectetur?
+            </p>
+          </div>
+        </div>
+        <div
+          class="relative border-2 border-white rounded-lg overflow-hidden size-full md:size-56 shadow-md cursor-pointer group"
+        >
+          <img src="./images/2.jpg" alt="image 1" class="thumbnailImg" />
+          <div
+            class="w-full absolute bottom-0 left-0 right-0 p-3 text-white bg-gray-900/80 opacity-0 group-hover:opacity-100"
+          >
+            <h3 class="text-sm font-semibold">Image title 5</h3>
+            <p class="text-xs mt-1 line-clamp-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
+              commodi tempore nisi voluptatem natus cumque rem laboriosam error
+              sed consectetur?
+            </p>
+          </div>
+        </div>
+        <div
+          class="relative border-2 border-white rounded-lg overflow-hidden size-full md:size-56 shadow-md cursor-pointer group"
+        >
+          <img src="./images/5.jpg" alt="image 1" class="thumbnailImg" />
+          <div
+            class="w-full absolute bottom-0 left-0 right-0 p-3 text-white bg-gray-900/80 opacity-0 group-hover:opacity-100"
+          >
+            <h3 class="text-sm font-semibold">Image title 6</h3>
+            <p class="text-xs mt-1 line-clamp-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
+              commodi tempore nisi voluptatem natus cumque rem laboriosam error
+              sed consectetur?
+            </p>
+          </div>
+        </div>
+        <div
+          class="relative border-2 border-white rounded-lg overflow-hidden size-full md:size-56 shadow-md cursor-pointer group"
+        >
+          <img src="./images/777.jpg" alt="image 1" class="thumbnailImg" />
+          <div
+            class="w-full absolute bottom-0 left-0 right-0 p-3 text-white bg-gray-900/80 opacity-0 group-hover:opacity-100"
+          >
+            <h3 class="text-sm font-semibold">Image title 7</h3>
+            <p class="text-xs mt-1 line-clamp-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
+              commodi tempore nisi voluptatem natus cumque rem laboriosam error
+              sed consectetur?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modalId">
+      <span class="modalClose" id="modalClose">&times;</span>
+      <img alt="modal image" class="modalContent" id="modalImage" />
+    </div>
+
+    <script>
+      const modal = document.querySelector("#modalId");
+      const imageContainer = document.querySelector("#modalImage");
+      const image = document.querySelectorAll(".thumbnailImg");
+      const closeButton = document.querySelector("#modalClose");
+
+      image.forEach((img) => {
+        img.parentElement.addEventListener("click", () => {
+          modal.style.display = "flex";
+          imageContainer.src = img.src;
+        });
+      });
+
+      closeButton.onclick = () => {
+        modal.style.display = "none";
+      };
+      modal.onclick = (e) => {
+        if (e.target === modal) modal.style.display = "none";
+      };
+    </script>
+  </body>
+</html>
