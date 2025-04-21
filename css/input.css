@@ -7,3 +7,38 @@
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@layer utilities {
+  .centerhv {
+    @apply flex items-center justify-center  min-h-screen;
+  }
+}
+
+@layer base {
+  .gradient_body {
+    @apply bg-radial from-indigo-700 via-purple-500 to-blue-900;
+    background-size: 400% 400%;
+    animation: leftRightPath 25s ease infinite;
+  }
+  .centerhv h1,
+  .centerhv h2,
+  .centerhv h3 {
+    @apply font-semibold text-gray-900;
+  }
+  .centerhv h1 {
+    @apply text-4xl mb-2 md:text-5xl md:mb-3 lg:text-6xl;
+  }
+  .centerhv h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@keyframes leftRightPath {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
