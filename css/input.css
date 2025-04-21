@@ -12,13 +12,18 @@
   .centerhv {
     @apply flex items-center justify-center  min-h-screen;
   }
+
+  .anim-flow {
+    animation: leftRightPath 25s ease infinite;
+    background-size: 400% 400%;
+  }
 }
 
 @layer base {
   .gradient_body {
     @apply bg-radial from-indigo-700 via-purple-500 to-blue-900;
     background-size: 400% 400%;
-    animation: leftRightPath 25s ease infinite;
+    animation: topBottomPath 25s ease infinite;
   }
   .centerhv h1,
   .centerhv h2,
@@ -40,5 +45,15 @@
   }
   50% {
     background-position: 100% 50%;
+  }
+}
+
+@keyframes topBottomPath {
+  0%,
+  100% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
   }
 }
